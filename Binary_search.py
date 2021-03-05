@@ -18,3 +18,8 @@ class Algorithm:
 my_list=[1,3,5,7,9]
 p=Algorithm()
 print(p.Binary_search(my_list,9))
+
+import time
+start_time = time.time()
+p.Binary_search(my_list,3)
+print(f"--- {(time.time() - start_time)} seconds ---" )
