@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
-import numpy as np
-from math import *
+
 
 index = []
 values = []
@@ -24,13 +23,14 @@ with open("foo","r") as file:
                         if i in lowerstr:
                             c = lowerstr.count(i)
                             percent = (c * 100) / len(lowerstr)
-                            with open("foo", "a") as file:
+                            with open("savedata", "a") as file:
                                 index.append(i)
                                 values.append(c)
                                 persentt.append(percent)
                                 file.write("\n")
                                 file.write(f"{i} = {c} = {percent}%")
 
-
-plt.bar(index,persentt)
+plt.xlabel('Әріптер')
+plt.ylabel('Әріптер саны')
+plt.bar(index,values)
 plt.show()
